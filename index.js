@@ -3,6 +3,7 @@ const app = express()
 const mongoose = require('mongoose');
 const Abc = require('./model/createModel')
 const cors = require('cors')
+require('dotenv').config()
 
 mongoose.connect('mongodb+srv://ecom:EehrLzy3XYX5WzCB@cluster0.vii99b3.mongodb.net/todo?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>{
@@ -51,7 +52,7 @@ const PORT = process.env.PORT
 
 
 app.listen(8000,()=>{
-    console.log("port connected")
+    console.log("port connected" + " " + PORT )
 })
 
 
