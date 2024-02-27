@@ -9,13 +9,7 @@ mongoose.connect('mongodb+srv://ecom:EehrLzy3XYX5WzCB@cluster0.vii99b3.mongodb.n
   console.log("mongoose")
 });
 
-// app.post('/create', (req, res) =>{
-//   const task = req.body.task;
-//   Abc.create({
-//     task: task
-//   }).then(result => res.json(result))
-//   .catch(err => res.json(err))
-// })
+
 
 app.use(express.json())
 app.use(cors())
@@ -53,6 +47,7 @@ app.delete('/delete/:id', function (req,res){
   .catch(err => res.json(err))
 })
 
+const PORT = process.env.PORT
 
 
 app.listen(8000,()=>{
